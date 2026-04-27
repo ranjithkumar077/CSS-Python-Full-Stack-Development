@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(232, 244, 240);
+}
+.head{
+    color: rgb(226, 13, 212);
+
+}
+.para{
+    color: rgb(252, 47, 47);
+}
+.center{
+    color:rgb(8, 24, 38)
+}
+h1.center{
+    text-align: center ;
+}
+p.center{
+text-align: justify;
+color: blueviolet;
+}
+#id{
+    text-align: center;
+    color: brown;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* descendant: all p inside div */
+div p {
+  color: blue;
+}
+
+/* child: only direct p children of div */
+div > p {
+  font-weight: bold;
+}
+
+/* adjacent sibling: first p after h2 */
+h2 + p {
+  color: red;
+}
+
+/* general sibling: all p after h2 */
+h2 ~ p {
+  background-color: #f0f0f0;
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+
+<div>
+  <p>Direct child of div.</p>
+  <section>
+    <p>Nested inside section (still a descendant of div).</p>
+  </section>
+</div>
+
+<h2>Heading</h2>
+<p>First paragraph after the heading.</p>
+<p>Second paragraph after the heading.</p>
+<p>Third paragraph after the heading.</p>
+
+</body>
+</html>

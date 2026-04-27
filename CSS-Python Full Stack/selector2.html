@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Selectors Extended Demo</title>
+<style>
+/* 1. Universal selector */
+* {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 5px;
+}
+
+/* 2. Element selector */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 3. ID selector */
+#intro {
+  font-weight: bold;
+  color: green;
+  background: #e0ffe0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* 4. Class selector */
+.highlight {
+  background-color: yellow;
+  padding: 8px;
+  border: 2px dashed orange;
+}
+
+/* 5. Pseudo-class selectors */
+a:link {
+  color: blue;
+}
+a:visited {
+  color: purple;
+}
+a:hover {
+  color: red;
+}
+a:active {
+  color: orange;
+}
+input:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* 6. Pseudo-element selectors */
+p::first-letter {
+  font-size: 24px;
+  color: orange;
+  font-weight: bold;
+}
+p::before {
+  content: "👉 ";
+  color: gray;
+}
+p::after {
+  content: " ✔";
+  color: green;
+}
+
+/* 7. Combination selectors */
+body p {
+  margin-bottom: 10px; /* descendant */
+}
+body > p {
+  border-bottom: 1px solid #ccc; /* child */
+}
+#intro + p {
+  text-decoration: underline; /* adjacent sibling */
+}
+#intro ~ p {
+  font-style: italic; /* general sibling */
+}
+
+/* Extra styling for demo elements */
+button {
+  background: dodgerblue;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+}
+button:hover {
+  background: navy;
+}
+ul li:first-child {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+table, th, td {
+  border: 1px solid black;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Selectors Showcase</h1>
+
+<p id="intro">Welcome to CSS selectors.</p>
+<p>This is a normal paragraph.</p>
+<p class="highlight">This paragraph is highlighted.</p>
+<p>Another sibling paragraph styled by general sibling selector.</p>
+
+<h2>Links and Buttons</h2>
+<a href="https://www.example.com">Visit Example</a><br>
+<a href="https://www.wikipedia.org">Visit Wikipedia</a><br>
+<button>Click Me</button>
+
+<h2>Form Input</h2>
+<input type="text" placeholder="Focus me to see effect">
+
+<h2>List Example</h2>
+<ul>
+  <li>First item (bold)</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ul>
+
+<h2>Table Example</h2>
+<table>
+  <tr><th>Name</th><th>Age</th></tr>
+  <tr><td>Alice</td><td>25</td></tr>
+  <tr><td>Bob</td><td>30</td></tr>
+  <tr><td>Charlie</td><td>28</td></tr>
+</table>
+
+</body>
+</html>

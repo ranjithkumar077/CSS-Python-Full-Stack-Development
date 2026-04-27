@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors Demo</title>
+<style>
+/* 1. Universal selector */
+* {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 5px;
+}
+
+/* 2. Element selector */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 3. ID selector */
+#intro {
+  font-weight: bold;
+  color: green;
+  background: #e0ffe0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* 4. Class selector */
+.highlight {
+  background-color: yellow;
+  padding: 8px;
+  border: 2px dashed orange;
+}
+
+/* 5. Pseudo-class selector */
+p:hover {
+  color: red;
+  cursor: pointer;
+}
+
+/* 6. Pseudo-element selector */
+p::first-letter {
+  font-size: 24px;
+  color: orange;
+  font-weight: bold;
+}
+
+/* 7. Combination selectors */
+
+/* a. Descendant selector */
+body p {
+  margin-bottom: 10px;
+}
+
+/* b. Child selector */
+body > p {
+  border-bottom: 1px solid #ccc;
+}
+
+/* c. Adjacent sibling selector */
+#intro + p {
+  text-decoration: underline;
+  color: blue;
+}
+
+/* d. General sibling selector */
+#intro ~ p {
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Selectors Showcase</h1>
+
+<p id="intro">Welcome to CSS selectors.</p>
+<p>This is a normal paragraph.</p>
+<p class="highlight">This paragraph is highlighted.</p>
+<p>Another sibling paragraph styled by general sibling selector.</p>
+
+</body>
+</html>
